@@ -3,16 +3,16 @@ import {
     View,
     Text,
     StyleSheet,
-    TouchableOpacity
+    TouchableHighlight
 } from 'react-native';
 
 const GoalItem = props => {
     return( 
-        <TouchableOpacity activeOpacity={0.8} onPress={props.onDelete}>
+        <TouchableHighlight onPress={props.onDelete}>
             <View style={styles.listItem} >
                 <Text>{props.title}</Text>
             </View>
-        </TouchableOpacity>
+        </TouchableHighlight>
     );
 }
 
