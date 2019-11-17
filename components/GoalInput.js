@@ -39,8 +39,8 @@ const styles = StyleSheet.create ({
     },
 
     viewScreen: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center'
     },
 });
