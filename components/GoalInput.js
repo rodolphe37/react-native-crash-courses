@@ -3,7 +3,8 @@ import {
     View,
     TextInput,
     Button,
-    StyleSheet
+    StyleSheet,
+    Modal
 } from 'react-native';
 
 
@@ -15,15 +16,17 @@ const GoalInput = props => {
     };
 
     return (
-        <View style={styles.viewScreen}>
-            <TextInput
-                placeholder="Ecrivez Ici !"
-                style={styles.input}
-                onChangeText={textInputHandler}
-                value={enteredGoal}
-            />
-            <Button title="Ajouter" onPress={props.onAddGoal.bind(this,enteredGoal)}  />
-        </View>
+        <Modal visible={props.visible} animationType="slide">
+            <View style={styles.viewScreen}>
+                <TextInput
+                    placeholder="Ecrivez Ici !"
+                    style={styles.input}
+                    onChangeText={textInputHandler}
+                    value={enteredGoal}
+                />
+                <Button title="Ajouter" onPress={props.onAddGoal.bind(this,enteredGoal)}  />
+            </View>
+        </Modal>
     );
 };
 
