@@ -15,10 +15,14 @@ const generateRandomBetween = (min, max, exclude) => {
     }
 };
 
-const GameScreen = () => {
+const GameScreen = props => {
      const [currentGuess, setCurrentGuess] = useState(
          generateRandomBetween(1, 100, props.userChoice)
         );
+
+        const nextGuessHandler = direction => {
+          
+        };
 
         return (
             <View style={styles.screen}>
@@ -29,7 +33,7 @@ const GameScreen = () => {
                     {currentGuess}
                 </NumberContainer>
                 <Card style={styles.buttonContainer}>
-                    <Button title="LOWER" onPress={() => {}} />
+                    <Button title="LOWER" onPress={nextGuessHandler.bind(this, 'lower')} />
                     <Button title="GREATER" onPress={() => {}} />
                 </Card>
             </View>
