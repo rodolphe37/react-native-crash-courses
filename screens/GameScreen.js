@@ -29,7 +29,7 @@ const GameScreen = props => {
             if (currentGuess === userChoice) {
                 onGameOver(rounds);
             }
-        }, [currentGuess, ]);
+        }, [currentGuess, userChoice, onGameOver]);
 
         const nextGuessHandler = direction => {
           if (
