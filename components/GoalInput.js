@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet} from 'react-native';
-import GoalItem from './GoalItem';
+import {
+    View,
+    TextInput,
+    Button,
+    StyleSheet
+} from 'react-native';
+
 
 const GoalInput = props => {
     const [enteredGoal, setEnteredGoal] = useState('');
@@ -28,7 +33,13 @@ const styles = StyleSheet.create ({
         borderColor: 'black',
         borderWidth: 1,
         padding: 10
-      },
+    },
+
+    viewScreen: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
 });
 
 export default GoalInput;

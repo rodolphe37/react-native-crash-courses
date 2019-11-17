@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { 
+    View,
+    Text,
+    StyleSheet
+} from 'react-native';
 
 const GoalItem = props => {
     return( 
@@ -16,7 +20,7 @@ const styles = StyleSheet.create ({
         backgroundColor: '#CCC',
         borderColor: 'black',
         borderWidth: 1
-      }
+    }
 
 });
 
