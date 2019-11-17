@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen'
+import StartGameScreen from './screens/StartGameScreen';
+import GameScreen from './screens/GameScreen';
 
 export default function App() {
-  const [outputText, setOutputText] = useState('Open up App.js to start working on your app!');
+  const [userNumber, setUserNumber] = useState();
+
+  const startGameHandler = (selectedNumber) => {
+    setUserNumber(selectedNumber);
+  };
+
+  let content = <StartGameScreen onStartGame={startGameHandler}/>
+
+  if (userNumber) {
+    content = <StartGameScreen userChoice={userNumber}/>;
+  }
+
   return (
     <View style={styles.screen}>
       <Header title="Guess a Number"/>
-      <StartGameScreen />
+      {content}
     </View>
   );
 }

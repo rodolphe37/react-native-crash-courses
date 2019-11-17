@@ -42,6 +42,7 @@ const StartGameScreen = props => {
             setConfirmed(true);
             setSelecteNumber(choseNumber);
             setEnterdeValue('');
+            Keyboard.dismiss();
         };
      
         let confirmedOutput;
@@ -51,7 +52,7 @@ const StartGameScreen = props => {
         <Card  style={styles.summaryContainer}>
             <Text>You selected{SelectedNumber}</Text>
             <NumberContainer>{SelectedNumber}</NumberContainer>
-            <Button title="START GAME"/>
+            <Button title="START GAME" onPress={() => onStartGame(SelectedNumber)}/>
         </Card>
         };
 
@@ -127,6 +128,7 @@ const styles = StyleSheet.create({
     },
     summaryContainer: {
         marginTop: 20,
+        alignItems: 'center'
     }
 });
 
